@@ -1,6 +1,5 @@
 package com.example.school.service;
 
-import com.example.school.dto.StudentRequest;
 import com.example.school.dto.StudentResponse;
 
 import java.util.List;

@@ -1,6 +1,5 @@
 package com.example.school.controller;
 
-import com.example.school.dto.StudentRequest;
 import com.example.school.dto.StudentResponse;
 import com.example.school.service.StudentService;
 import lombok.RequiredArgsConstructor;
