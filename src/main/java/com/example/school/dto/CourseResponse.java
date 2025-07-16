@@ -7,7 +7,6 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Data
 public class CourseResponse {
     private Long id;
     private String title;
