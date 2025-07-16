@@ -94,26 +94,39 @@ This is a **Spring Boot REST API** to manage students and courses with authentic
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-org/school-app.git
-cd school-app
+git clone https://github.com/omneyaEid/spring-boot-student-course.git
+cd spring-boot-student-course
 ```
+
 
 ### 2. Set up PostgreSQL
 Create a database named schooldb:
 
+- Database: `schooldb`
+- Schema: `hoduwmi`
+
+Make sure to create both using the PostgreSQL CLI:
+
+
 ```bash
+sql
 CREATE DATABASE schooldb;
+\c schooldb
+CREATE SCHEMA hoduwmi;
 ```
 
 ### 3. Configure application-dev.yml
 Update your DB credentials:
 
 ```bash
-spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/schooldb
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/schooldb?currentSchema=hoduwmi
     username: postgres
-    password: your_password
+    password: 1234
+    hikari:
+      poolName: Hikari
+      auto-commit: false
 ```
 
 ### 4. Run the application
